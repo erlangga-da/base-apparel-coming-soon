@@ -9,19 +9,16 @@
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
 
     /* Gradients */
-/* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
     --Grad-1 : linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     --Grad-2 : linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 /* mobile style */
 body{
-    width: 320px;
+    max-width: 850px;
     margin: auto;
 }
 nav {
     width: 100%;
-    /* background-color: red; */
     padding: 20px 30px;
 }
 nav img{
@@ -29,10 +26,17 @@ nav img{
 }
 .img-container{
     height: 213px;
-    background: aqua;
 }
 .img-container img{
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+.hide-lg{
+    display: block;
+}
+.show-lg{
+    display: none;
 }
 .text-container{
     /* background-color: blue; */
@@ -108,4 +112,94 @@ form{
 }
 .icon-error.err-icon{
     display: block;
+}
+
+/* standard mobile */
+@media screen and (min-width: 412px) {
+    nav {
+        padding: 30px;
+    }
+    nav img{
+        width: 120px;
+    }
+    .img-container{
+        height: 270px;
+    }
+    .text-container {
+        padding: 50px 35px;
+    }
+    .text-container h1 {
+        letter-spacing: 10px;
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .text-container p{
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+}
+/* small tablet */
+@media screen and (min-width: 610px) {
+    nav {
+        padding: 45px;
+    }
+    nav img {
+        width: 150px;
+    }
+    .img-container {
+        height: 420px;
+    }
+    .text-container {
+        padding: 90px 140px;
+    }
+    .text-container h1 {
+        letter-spacing: 20px;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    .text-container p {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+}
+/* small dekstop */
+@media screen and (min-width: 850px) {
+    nav {
+        display: none;
+    }
+    body{
+        max-width: 100%;
+    }
+    .box-container{
+        display: flex;
+        max-height: 100vh;
+        flex-direction: row-reverse;
+    }
+    nav img {
+        width: 150px;
+    }
+    .hide-lg{
+        display: none;
+    }
+    .show-lg{
+        display: block;
+    }
+    .img-container {
+        height: 100%;
+        width: 45%;
+    }
+    .text-container {
+        padding: 90px 140px;
+        width: 55%;
+        text-align: left;
+    }
+    .text-container h1 {
+        letter-spacing: 20px;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    .text-container p {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
 }
