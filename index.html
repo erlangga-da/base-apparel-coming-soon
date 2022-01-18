@@ -36,25 +36,31 @@
               store. Add your email below to stay up-to-date with announcements
               and our launch deals.
             </p>
-            <form action="#" method="post">
+            <form>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
+                oninvalid="myFunc();"
                 required
               />
+              <img class="icon-error" src="./images/icon-error.svg" alt="icon-error" id="err-icon">
               <button type="submit">
                 <img src="./images/icon-arrow.svg" alt="icon-arrow" />
               </button>
-              <!-- <div class="invalid-feedback">Please choose a username.</div> -->
             </form>
+            <div id="err-msg" class="invalid-feedback">Please provide a valid email</div>
           </div>
         </div>
       </main>
     </header>
     <script>
-      
+      function myFunc() {
+        document.getElementById("email").classList.add("red-outline");
+        document.getElementById("err-msg").classList.add("err-active");
+        document.getElementById("err-icon").classList.add("err-icon");
+      }
     </script>
   </body>
 </html>

@@ -71,7 +71,14 @@ form{
     color: var(--Desaturated-Red);
     font-size: 14px;
 }
+.text-container input[type="email"]:focus {
+    outline-width: 0;
+}
+.red-outline {
+    border: 1px solid var(--Soft-Red) !important;
+}
 .text-container button{
+    cursor: pointer;
     position: absolute;
     right: 0;
     z-index: 10;
@@ -81,4 +88,24 @@ form{
     padding: 11px 28px;
     padding-right: 24px;
     box-shadow: 0px 12px 25px 0px hsl(0deg 100% 89%);;
+}
+.invalid-feedback{
+    display: none;
+    text-align: left;
+    padding: 10px 20px;
+    color: var(--Soft-Red);
+    font-size: 12px;
+}
+.err-active{
+    display: block;
+}
+.icon-error{
+    position: absolute;
+    z-index: 9;
+    right: 70px;
+    bottom: 12px;
+    display: none;
+}
+.icon-error.err-icon{
+    display: block;
 }
