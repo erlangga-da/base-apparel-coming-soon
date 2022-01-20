@@ -44,7 +44,7 @@
                 name="email"
                 id="email"
                 placeholder="Email Address"
-                oninvalid="myFunc();"
+                oninvalid="errorInput();"
                 required
               />
               <img class="icon-error" src="./images/icon-error.svg" alt="icon-error" id="err-icon">
@@ -58,10 +58,11 @@
       </main>
     </header>
     <script>
-      function myFunc() {
-        document.getElementById("email").classList.add("red-outline");
-        document.getElementById("err-msg").classList.add("err-active");
-        document.getElementById("err-icon").classList.add("err-icon");
+      function errorInput() {
+        const id = ["email", "err-msg", "err-icon"];
+        for (let i = 0; i < id.length; i++) {
+          document.getElementById(id[i]).classList.add("err-active");
+        }
       }
     </script>
   </body>
