@@ -39,7 +39,6 @@ nav img{
     display: none;
 }
 .text-container{
-    /* background-color: blue; */
     text-align: center;
     padding: 50px 25px;
 }
@@ -67,6 +66,8 @@ nav img{
     border-radius: 50px;
     border: 1px solid var(--Desaturated-Red);
     font-size: 14px;
+    opacity: 55%;
+    transition: .5s;
 }
 form{
     position: relative;
@@ -77,6 +78,7 @@ form{
 }
 .text-container input[type="email"]:focus {
     outline-width: 0;
+    opacity: 100%;
 }
 .red-outline {
     border: 1px solid var(--Soft-Red) !important;
@@ -150,33 +152,23 @@ form{
         height: 420px;
     }
     .text-container {
-        padding: 90px 140px;
+        padding: 90px;
     }
     .text-container h1 {
         letter-spacing: 20px;
         font-size: 50px;
         margin-bottom: 40px;
     }
-    .text-container p {
-        font-size: 22px;
-        margin-bottom: 35px;
-    }
 }
 /* small dekstop */
 @media screen and (min-width: 850px) {
-    nav {
-        display: none;
-    }
     body{
         max-width: 100%;
     }
     .box-container{
         display: flex;
-        max-height: 100vh;
+        height: 100vh;
         flex-direction: row-reverse;
-    }
-    nav img {
-        width: 150px;
     }
     .hide-lg{
         display: none;
@@ -189,17 +181,67 @@ form{
         width: 45%;
     }
     .text-container {
-        padding: 90px 140px;
+        padding: 50px 90px;
         width: 55%;
         text-align: left;
     }
+    .text-container img.show-lg{
+        margin-bottom: 80px;
+        width: 120px;
+    }
     .text-container h1 {
-        letter-spacing: 20px;
-        font-size: 50px;
-        margin-bottom: 40px;
+        letter-spacing: 10px;
+        font-size: 45px;
     }
     .text-container p {
-        font-size: 22px;
+        font-size: 16px;
         margin-bottom: 35px;
+    }
+}
+/* standard dekstop */
+@media screen and (min-width: 1280px) {
+    .text-container {
+        padding: 60px 150px;
+    }
+    .text-container img.show-lg{
+        width: 150px;
+        margin-bottom: 50px;
+    }
+    .text-container h1 {
+        letter-spacing: 15px;
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .text-container p {
+        line-height: 30px;
+    }
+}
+/* big screen */
+@media screen and (min-width: 1440px) {
+    .img-container {
+        width: 40%;
+    }
+    .text-container {
+        width: 60%;
+        padding: 70px 140px;
+        padding-right: 280px;
+    }
+    .text-container img.show-lg{
+        margin-bottom: 80px;
+    }
+    .text-container h1 {
+        font-size: 65px;
+        line-height: 70px;
+    }
+    .text-container input[type="email"] {
+        padding: 20px 28px;
+        font-size: 16px;
+    }
+    .text-container input[type="email"]::placeholder {
+        font-size: 16px;
+    }
+    .invalid-feedback{
+        margin-top: 6px;
+        font-size: 15px;
     }
 }
