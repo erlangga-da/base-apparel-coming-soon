@@ -92,6 +92,9 @@ form{
     padding-right: 24px;
     box-shadow: 0px 12px 25px 0px hsl(0deg 100% 89%);;
 }
+.text-container button:hover {
+    background: var(--Grad-1);
+}
 .invalid-feedback{
     opacity: 0%;
     text-align: left;
@@ -212,24 +215,6 @@ form{
     .text-container p {
         line-height: 30px;
     }
-}
-/* big screen */
-@media screen and (min-width: 1440px) {
-    .img-container {
-        width: 40%;
-    }
-    .text-container {
-        width: 60%;
-        padding: 70px 140px;
-        padding-right: 280px;
-    }
-    .text-container img.show-lg{
-        margin-bottom: 100px;
-    }
-    .text-container h1 {
-        font-size: 65px;
-        line-height: 70px;
-    }
     .text-container input[type="email"] {
         padding: 20px 28px;
         font-size: 16px;
@@ -248,5 +233,23 @@ form{
     .invalid-feedback{
         margin-top: 6px;
         font-size: 15px;
+    }
+}
+/* big screen */
+@media screen and (min-width: 1440px) {
+    .img-container {
+        width: 40%;
+    }
+    .text-container {
+        width: 60%;
+        padding: 70px 140px;
+        padding-right: 280px;
+    }
+    .text-container img.show-lg{
+        margin-bottom: 100px;
+    }
+    .text-container h1 {
+        font-size: 65px;
+        line-height: 70px;
     }
 }
